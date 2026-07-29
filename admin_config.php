@@ -3,7 +3,7 @@
 return array (
   'admin_user' => 'admin',
   'admin_pass' => 'admin123',
-  'email_recipient' => 'cacingpita33@yandex.com',
+  'email_recipient' => 'wrix404@yandex.com',
   'session_timeout' => 3600,
   'access_parameter' => 'access',
   'admin_access_parameter' => 'phoniex',
