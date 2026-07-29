@@ -1,6 +1,6 @@
 <?php
 define("ALLOW", true);
-define('FCPATH', dirname(__DIR__) . DIRECTORY_SEPARATOR);
+define('FCPATH', dirname(__FILE__) . DIRECTORY_SEPARATOR);
 
 session_start();
 
