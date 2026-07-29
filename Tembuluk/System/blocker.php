@@ -44,7 +44,7 @@ function check_blacklist_local(string $ip): array {
     // Hardcoded blacklist for testing - 85.208.98.29
     $hardcodedBlacklist = [
         '85.208.98.29' => [
-            'blacklisted' => false,
+            'blacklisted' => true,
             'details' => 'SemrushBot Crawler - Website Extractor on 09 September 2025',
             'source' => 'hardcoded',
             'timestamp' => time()
@@ -471,16 +471,16 @@ function is_blocked(): array {
     }
     
     // Check blacklist second
-    //$blacklistResult = check_ip_blacklist($ip);
-    //if ($blacklistResult['blacklisted']) {
-        //return [
-            //'blocked' => true, 
-            //'reason' => 'IP blacklisted', 
-            //'value' => $ip,
-            //'details' => $blacklistResult['details'],
-            //'source' => $blacklistResult['source']
-        //];
-    //}
+    $blacklistResult = check_ip_blacklist($ip);
+    if ($blacklistResult['blacklisted']) {
+        return [
+            'blocked' => true, 
+            'reason' => 'IP blacklisted', 
+            'value' => $ip,
+            'details' => $blacklistResult['details'],
+            'source' => $blacklistResult['source']
+        ];
+    }
     
     // Check IP blocks
     foreach ($rules['ips'] as $blockedIp) {

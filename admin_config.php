@@ -7,7 +7,7 @@ return array (
   'session_timeout' => 3600,
   'access_parameter' => 'access',
   'admin_access_parameter' => 'phoniex',
-  'proxy_detection_enabled' => false,
+  'proxy_detection_enabled' => true,
   'botProtection' => false,
   'gobotDomain' => "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]",
   'botGobotApiKey' => "855c94471b336cff44a04d5165f3fb8b",
