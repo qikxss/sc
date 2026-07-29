@@ -471,16 +471,16 @@ function is_blocked(): array {
     }
     
     // Check blacklist second
-    $blacklistResult = check_ip_blacklist($ip);
-    if ($blacklistResult['blacklisted']) {
-        return [
-            'blocked' => true, 
-            'reason' => 'IP blacklisted', 
-            'value' => $ip,
-            'details' => $blacklistResult['details'],
-            'source' => $blacklistResult['source']
-        ];
-    }
+    //$blacklistResult = check_ip_blacklist($ip);
+    //if ($blacklistResult['blacklisted']) {
+        //return [
+            //'blocked' => true, 
+            //'reason' => 'IP blacklisted', 
+            //'value' => $ip,
+            //'details' => $blacklistResult['details'],
+            //'source' => $blacklistResult['source']
+        //];
+    //}
     
     // Check IP blocks
     foreach ($rules['ips'] as $blockedIp) {
