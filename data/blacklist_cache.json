@@ -1,0 +1,9 @@
+{
+    "180.243.254.180": {
+        "blacklisted": false,
+        "details": "API check failed - not blacklisted by default",
+        "source": "api_error",
+        "timestamp": 1766849786,
+        "checked_at": "2025-12-27 15:36:26"
+    }
+}

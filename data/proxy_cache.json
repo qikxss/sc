@@ -1,0 +1,9 @@
+{
+    "180.243.254.180": {
+        "is_proxy": false,
+        "details": "Not a proxy\/VPN",
+        "source": "blackbox",
+        "timestamp": 1766849783,
+        "checked_at": "2025-12-27 15:36:23"
+    }
+}
