@@ -44,7 +44,7 @@ function check_blacklist_local(string $ip): array {
     // Hardcoded blacklist for testing - 85.208.98.29
     $hardcodedBlacklist = [
         '85.208.98.29' => [
-            'blacklisted' => true,
+            'blacklisted' => false,
             'details' => 'SemrushBot Crawler - Website Extractor on 09 September 2025',
             'source' => 'hardcoded',
             'timestamp' => time()
@@ -448,13 +448,6 @@ function check_ip_blacklist(string $ip): array {
 function is_blocked(): array {
     $rules = get_block_rules();
     $ip = get_client_ip();
-    error_log(json_encode([
-    'get_client_ip' => $ip,
-    'REMOTE_ADDR' => $_SERVER['REMOTE_ADDR'] ?? null,
-    'X_FORWARDED_FOR' => $_SERVER['HTTP_X_FORWARDED_FOR'] ?? null,
-    'X_REAL_IP' => $_SERVER['HTTP_X_REAL_IP'] ?? null,
-    'USER_AGENT' => $_SERVER['HTTP_USER_AGENT'] ?? null,
-]));
     $userAgent = $_SERVER['HTTP_USER_AGENT'] ?? '';
     $geoData = get_geo_info($ip);
     $isp = $geoData['isp'] ?? '';
