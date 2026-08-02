@@ -4,7 +4,7 @@ define('FCPATH', dirname(__DIR__) . DIRECTORY_SEPARATOR);
 
 session_start();
 
-require FCPATH . 'api\Tembuluk\System\helpers.php';
+require FCPATH . 'Tembuluk/System/helpers.php';
 require FCPATH . 'Tembuluk/System/activity.php';
 require FCPATH . 'Tembuluk/System/blocker.php';
 require FCPATH . 'Tembuluk/Gobot/blocker.php';
